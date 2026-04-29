@@ -1,7 +1,7 @@
 export default function Awards() {
   return (
     <section id="awards" className="max-w-2xl mx-auto px-6 py-12">
-      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-8"><span className="text-[#cccccc] mr-2">04 /</span>Awards &amp; Competitions</p>
+      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">04 /</span>Awards &amp; Competitions</p>
 
       <div>
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">

@@ -9,7 +9,7 @@ const skillGroups = [
 export default function Skills() {
   return (
     <section id="skills" className="max-w-2xl mx-auto px-6 py-12">
-      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-8"><span className="text-[#cccccc] mr-2">02 /</span>Skills</p>
+      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">02 /</span>Skills</p>
 
       <div className="space-y-6">
         {skillGroups.map((group) => (

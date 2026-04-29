@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section id="contact" className="max-w-2xl mx-auto px-6 py-12 pb-20">
-      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-8"><span className="text-[#cccccc] mr-2">06 /</span>Contact</p>
+      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">06 /</span>Contact</p>
 
       <p className="text-[1.05rem] leading-relaxed text-[#444444] mb-6">
         I&apos;m currently open to intern and junior roles in AI engineering or

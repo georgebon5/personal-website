@@ -1,7 +1,7 @@
 export default function Currently() {
   return (
     <section className="max-w-2xl mx-auto px-6 py-10">
-      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-5"><span className="text-[#cccccc] mr-2">01 /</span>Currently</p>
+      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-5"><span className="text-[#999999] mr-2">01 /</span>Currently</p>
 
       <div className="space-y-3">
         {[

@@ -20,7 +20,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="max-w-2xl mx-auto px-6 py-12">
-      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-8"><span className="text-[#cccccc] mr-2">03 /</span>Projects</p>
+      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">03 /</span>Projects</p>
 
       <div className="space-y-12">
         {projects.map((project) => (
