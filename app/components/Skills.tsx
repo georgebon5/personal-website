@@ -1,63 +1,35 @@
 const skillGroups = [
-  {
-    category: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Java", "C", "SQL"],
-  },
-  {
-    category: "ML / AI",
-    skills: ["PyTorch", "scikit-learn", "MLflow", "DVC", "Hugging Face", "LangChain"],
-  },
-  {
-    category: "Backend",
-    skills: ["FastAPI", "Node.js", "REST APIs", "WebSockets", "Celery", "Redis"],
-  },
-  {
-    category: "Frontend",
-    skills: ["Next.js", "React", "Tailwind CSS"],
-  },
-  {
-    category: "Infrastructure",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "Nginx"],
-  },
-  {
-    category: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Qdrant"],
-  },
+  { category: "Languages", skills: ["Python", "C++", "SQL", "TypeScript", "JavaScript"] },
+  { category: "ML / AI", skills: ["PyTorch", "Scikit-learn", "ChromaDB", "Anthropic SDK", "Evidently AI", "RAG", "LLM integration"] },
+  { category: "Backend", skills: ["FastAPI", "Flask", "PostgreSQL", "Redis", "Celery", "WebSockets"] },
+  { category: "Frontend", skills: ["Next.js", "React", "TypeScript"] },
+  { category: "Infrastructure", skills: ["Docker", "Kubernetes", "GitHub Actions", "MLflow", "DVC"] },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-foreground mb-2">
-          <span className="text-(--accent) font-mono text-xl mr-2">02.</span>
-          Skills &amp; Technologies
-        </h2>
-        <div className="w-16 h-0.5 bg-(--accent) mb-12" />
+    <section id="skills" className="max-w-2xl mx-auto px-6 py-12">
+      <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-8"><span className="text-[#cccccc] mr-2">02 /</span>Skills</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillGroups.map((group) => (
-            <div
-              key={group.category}
-              className="bg-(--card) rounded-xl p-6 border border-white/5 hover:border-(--accent)/30 transition-colors"
-            >
-              <h3 className="text-(--accent2) font-semibold mb-4 text-sm uppercase tracking-widest">
-                {group.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 rounded-full bg-white/5 text-foreground text-sm font-mono"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+      <div className="space-y-6">
+        {skillGroups.map((group) => (
+          <div key={group.category} className="flex flex-col sm:flex-row sm:gap-8">
+            <p className="text-sm text-[#999999] w-32 shrink-0 mb-2 sm:mb-0 sm:pt-0.5">{group.category}</p>
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-2.5 py-0.5 text-xs border border-[#cccccc] rounded text-[#444444] bg-transparent"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
+
+      <hr className="mt-12 border-[#e8e8e8]" />
     </section>
   );
 }

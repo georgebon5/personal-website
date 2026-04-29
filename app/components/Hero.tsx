@@ -1,44 +1,59 @@
 export default function Hero() {
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center px-6 pt-20"
-    >
-      <div className="max-w-3xl w-full">
-        <p className="text-(--accent) font-mono text-sm mb-4 animate-fade-in-up">
-          Hi, my name is
-        </p>
-        <h1 className="text-5xl md:text-7xl font-extrabold text-foreground leading-tight animate-fade-in-up animate-delay-100">
-          George Bonovas.
-        </h1>
-        <h2 className="text-3xl md:text-5xl font-bold text-(--muted) mt-3 animate-fade-in-up animate-delay-200">
-          Software Engineer.
-        </h2>
-        <p className="mt-6 max-w-2xl text-(--muted) text-lg leading-relaxed animate-fade-in-up animate-delay-300">
-          CS student @ NKUA (3rd year, expected 2027) building applied ML
-          systems and backend infrastructure. Took 1st place at the{" "}
-          <span className="text-(--accent)">NBG TechBiz Hackathon</span>{" "}
-          — co-shipped a full-stack youth banking platform with Next.js and the
-          Claude API in 24 hours. Open to intern and junior roles in{" "}
-          <span className="text-(--accent2)">AI engineering</span> or{" "}
-          <span className="text-(--accent2)">backend</span> — hybrid or
-          remote.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up animate-delay-400">
-          <a
-            href="#projects"
-            className="px-6 py-3 rounded border border-(--accent) text-(--accent) font-mono text-sm hover:bg-(--accent)/10 transition-colors"
-          >
-            See my work
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded border border-[var(--accent2)] text-(--accent2) font-mono text-sm hover:bg-(--accent2)/10 transition-colors"
-          >
-            Get in touch
-          </a>
-        </div>
+    <section id="about" className="max-w-2xl mx-auto px-6 pt-16 pb-12">
+      <h1 className="font-serif-display text-[3.5rem] md:text-[4.5rem] font-bold leading-none tracking-tight text-[#111111] anim-1">
+        George Bonovas
+      </h1>
+
+      <p className="mt-4 text-xs tracking-[0.2em] text-[#999999] uppercase anim-2">
+        Software Engineer · Athens, Greece
+      </p>
+
+      <span className="inline-flex items-center gap-1.5 mt-3 text-xs text-[#3d7a52] tracking-[0.15em] uppercase anim-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#3d7a52] animate-pulse" />
+        Open to internships
+      </span>
+
+      <p className="mt-6 text-[1.05rem] leading-relaxed text-[#444444] anim-3">
+        3rd-year CS at NKUA. I&apos;ve built a production RAG system, an MLOps
+        pipeline, and won a hackathon — mostly backend and AI work. Looking for
+        a software engineering internship.
+      </p>
+
+      <div className="mt-7 flex flex-wrap gap-6 text-sm anim-4">
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-3 py-1.5 border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#ffffff] transition-colors text-xs tracking-[0.15em] uppercase"
+        >
+          CV
+        </a>
+        <a
+          href="mailto:georgebonovas315@gmail.com"
+          className="text-[#111111] hover:text-[#999999] transition-colors"
+        >
+          georgebonovas315@gmail.com
+        </a>
+        <a
+          href="https://github.com/georgebon5"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#111111] hover:text-[#999999] transition-colors"
+        >
+          GitHub →
+        </a>
+        <a
+          href="https://www.linkedin.com/in/george-bonovas"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#111111] hover:text-[#999999] transition-colors"
+        >
+          LinkedIn →
+        </a>
       </div>
+
+      <hr className="mt-12 border-[#e8e8e8]" />
     </section>
   );
 }
