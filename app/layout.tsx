@@ -1,21 +1,44 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "George Bonovas — Software Engineer",
   description:
-    "Personal portfolio of George Bonovas — CS student at NKUA, building ML systems and backend infrastructure.",
+    "CS student at NKUA. I build backend systems and ML pipelines. Looking for an internship.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
+  openGraph: {
+    title: "George Bonovas — Software Engineer",
+    description:
+      "CS student at NKUA. I build backend systems and ML pipelines. Looking for an internship.",
+    url: "https://georgebon5.github.io/mysite",
+    siteName: "George Bonovas",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "George Bonovas — Software Engineer",
+    description:
+      "CS student at NKUA. I build backend systems and ML pipelines. Looking for an internship.",
+  },
 };
 
 export default function RootLayout({
@@ -26,9 +49,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full"><ScrollToTop />{children}</body>
     </html>
   );
 }
