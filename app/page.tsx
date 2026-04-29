@@ -8,7 +8,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Image from "next/image";
 
-const basePath = process.env.NODE_ENV === "production" ? "/personal-website" : "";
+const basePath = "/personal-website";
 const photos = [
   `${basePath}/photos/6B06A480-6B42-4639-9D5B-798D67BAC63E.jpeg`,
   `${basePath}/photos/IMG_5583.jpeg`,
