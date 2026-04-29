@@ -5,9 +5,8 @@ export default function Currently() {
 
       <div className="space-y-3">
         {[
-          { label: "Building", value: "this portfolio" },
-          { label: "Studying", value: "3rd year at NKUA — Distributed Systems, Graph Theory" },
-          { label: "Looking for", value: "a software engineering internship" },
+          { label: "Exploring", value: "internship opportunities in software engineering." },
+          { label: "Building", value: "personal projects" },
         ].map((item) => (
           <div key={item.label} className="flex gap-4 text-sm">
             <span className="text-[#999999] w-20 shrink-0">{item.label}</span>
