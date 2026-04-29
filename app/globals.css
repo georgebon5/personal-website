@@ -24,3 +24,12 @@ body {
 .anim-3 { animation: fadeInUp 0.5s ease both 0.25s; }
 .anim-4 { animation: fadeInUp 0.5s ease both 0.35s; }
 
+@keyframes pulse-strong {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-strong {
+  animation: pulse-strong 1.2s ease-in-out infinite;
+}
+

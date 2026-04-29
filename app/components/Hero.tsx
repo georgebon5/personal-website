@@ -5,12 +5,12 @@ export default function Hero() {
         George Bonovas
       </h1>
 
-      <p className="mt-4 text-xs tracking-[0.2em] text-[#999999] uppercase anim-2">
+      <p className="mt-4 text-xs tracking-[0.2em] text-[#444444] font-semibold uppercase anim-2">
         Software Engineer · Athens, Greece
       </p>
 
-      <span className="inline-flex items-center gap-1.5 mt-3 text-xs text-[#3d7a52] tracking-[0.15em] uppercase anim-2">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#3d7a52] animate-pulse" />
+      <span className="inline-flex items-center gap-1.5 mt-3 text-xs text-[#3d7a52] tracking-[0.15em] uppercase anim-2" style={{animation: "pulse-strong 1.2s ease-in-out infinite"}}>
+        <span className="w-2 h-2 rounded-full bg-[#3d7a52]" />
         Open to internships
       </span>
 
