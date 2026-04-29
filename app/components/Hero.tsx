@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="mt-7 flex flex-wrap gap-6 text-sm anim-4">
         <a
-          href="/cv.pdf"
+          href={`${process.env.NODE_ENV === "production" ? "/personal-website" : ""}/cv.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="px-3 py-1.5 border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-[#ffffff] transition-colors text-xs tracking-[0.15em] uppercase"

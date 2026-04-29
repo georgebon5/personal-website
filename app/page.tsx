@@ -8,12 +8,13 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Image from "next/image";
 
+const basePath = process.env.NODE_ENV === "production" ? "/personal-website" : "";
 const photos = [
-  "/photos/6B06A480-6B42-4639-9D5B-798D67BAC63E.jpeg",
-  "/photos/IMG_5583.jpeg",
-  "/photos/IMG_5600.jpeg",
-  "/photos/IMG_5711.jpeg",
-  "/photos/IMG_5731.png",
+  `${basePath}/photos/6B06A480-6B42-4639-9D5B-798D67BAC63E.jpeg`,
+  `${basePath}/photos/IMG_5583.jpeg`,
+  `${basePath}/photos/IMG_5600.jpeg`,
+  `${basePath}/photos/IMG_5711.jpeg`,
+  `${basePath}/photos/IMG_5731.png`,
 ];
 
 export default function Home() {
