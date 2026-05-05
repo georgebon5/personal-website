@@ -58,7 +58,7 @@ export default function Projects() {
             { title: "Operating Systems", stack: "C — processes, memory, scheduling" },
             { title: "RSA", stack: "C — encryption from scratch" },
             { title: "eshop", stack: "C++ — basic e-commerce simulation" },
-            { title: "opengl-shadow-renderer", stack: "C++ — real-time shadow rendering with OpenGL" },
+            { title: "opengl-shadow-renderer", stack: "C++ — 3D renderer, shadow mapping, Phong lighting" },
           ].map((item) => (
             <div key={item.title} className="flex gap-3 text-sm">
               <span className="text-[#111111] font-medium shrink-0">{item.title}</span>
