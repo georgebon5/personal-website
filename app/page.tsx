@@ -31,25 +31,30 @@ export default function Home() {
         <Contact />
       </main>
 
-      <div className="max-w-2xl mx-auto px-6 py-10">
-        <p className="text-xs tracking-[0.2em] text-[#999999] uppercase mb-5">Photos</p>
-        <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1">
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
+        <p className="font-mono text-xs tracking-widest text-[#555555] uppercase mb-5">
+          <span className="text-[#a3e635] mr-2">//</span>moments
+        </p>
+        <div className="flex gap-3 overflow-x-auto pb-2 -mx-1 px-1">
           {photos.map((src, i) => (
-            <div key={i} className="shrink-0 w-28 h-28 rounded overflow-hidden">
+            <div key={i} className="shrink-0 w-32 h-32 overflow-hidden border border-[#1f1f1f] grayscale hover:grayscale-0 transition-all duration-500">
               <Image
                 src={src}
                 alt={`photo ${i + 1}`}
-                width={112}
-                height={112}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                width={128}
+                height={128}
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
           ))}
         </div>
-      </div>
-      <footer className="max-w-2xl mx-auto px-6 py-8 border-t border-[#e8e8e8] flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-[#999999]">
-        <span>George Bonovas · {new Date().getFullYear()}</span>
-        <span>Built with Next.js · Hosted on GitHub Pages</span>
+      </section>
+
+      <footer className="max-w-5xl mx-auto px-6 py-10 border-t border-[#1f1f1f] flex flex-col sm:flex-row sm:justify-between gap-2 font-mono text-xs text-[#555555]">
+        <span>
+          <span className="text-[#a3e635]">©</span> george.bonovas · {new Date().getFullYear()}
+        </span>
+        <span>built with next.js · deployed on github pages</span>
       </footer>
     </>
   );
