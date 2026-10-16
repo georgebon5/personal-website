@@ -1,32 +1,45 @@
 export default function Awards() {
-  return (
-    <section id="awards" className="max-w-2xl mx-auto px-6 py-12">
-      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">04 /</span>Awards &amp; Competitions</p>
+  const bullets = [
+    "Competed in the National Bank of Greece track — we built a youth banking app with some AI features.",
+    "Two codebases, GDPR compliance, REST API mockups, all done in under 24 hours.",
+  ];
 
-      <div>
-        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-          <h3 className="text-[#111111] font-semibold text-base">
-            1st Place — TechBiz Hackathon, NBG Challenge
-          </h3>
-          <span className="text-sm text-[#999999] shrink-0">
-            1st in NBG Track · 3rd Overall
-          </span>
-        </div>
-        <p className="text-sm text-[#999999] mt-1">National Bank of Greece</p>
-        <ul className="mt-3 space-y-1.5">
-          {[
-            "Competed in the National Bank of Greece track — we built a youth banking app with some AI features.",
-            "Two codebases, GDPR compliance, REST API mockups, all done in under 24 hours.",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm text-[#444444] leading-relaxed">
-              <span className="mt-1.5 w-1 h-1 rounded-full bg-[#999999] shrink-0" />
-              {item}
-            </li>
-          ))}
-        </ul>
+  return (
+    <section id="awards" className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
+      <div className="flex items-baseline gap-4 mb-10">
+        <span className="font-mono text-xs text-[#555555]">04</span>
+        <span className="h-px flex-grow bg-[#1f1f1f]" />
+        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">awards</h2>
       </div>
 
-      <hr className="mt-12 border-[#e8e8e8]" />
+      <div className="border border-[#1f1f1f] bg-[#121212]/40 p-6 md:p-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 font-mono text-[8rem] md:text-[10rem] font-bold text-[#a3e635]/[0.04] leading-none pointer-events-none select-none">
+          1st
+        </div>
+
+        <div className="relative">
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+            <h3 className="font-display text-xl md:text-2xl font-semibold text-[#ededed]">
+              TechBiz Hackathon — NBG Challenge
+            </h3>
+            <span className="font-mono text-xs text-[#a3e635]">
+              1st · nbg track // 3rd · overall
+            </span>
+          </div>
+          <p className="font-mono text-xs text-[#555555] mb-5">National Bank of Greece</p>
+          <ul className="space-y-2.5">
+            {bullets.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-sm text-[#ededed]/80 leading-relaxed"
+              >
+                <span className="font-mono text-[#a3e635] shrink-0 mt-0.5">▸</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }
