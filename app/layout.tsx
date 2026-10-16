@@ -26,16 +26,15 @@ export const metadata: Metadata = {
     "CS student at NKUA. I build backend systems and ML pipelines. Looking for an internship.",
   icons: {
     icon: [
-      { url: "/personal-website/favicon.png", type: "image/png" },
-      { url: "/personal-website/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: "/personal-website/apple-touch-icon.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "George Bonovas — Software Engineer",
     description:
       "CS student at NKUA. I build backend systems and ML pipelines. Looking for an internship.",
-    url: "https://georgebon5.github.io/mysite",
     siteName: "George Bonovas",
     type: "website",
   },

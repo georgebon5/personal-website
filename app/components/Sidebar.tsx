@@ -88,7 +88,7 @@ export default function Sidebar() {
 
       <div className="mt-14 lg:mt-0 flex flex-wrap gap-x-6 gap-y-3 text-sm anim-4">
         <a
-          href="/personal-website/cv.pdf"
+          href="/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#e8e8e8] hover:text-white underline underline-offset-4 decoration-[#555555] hover:decoration-[#e8e8e8] transition-colors"
