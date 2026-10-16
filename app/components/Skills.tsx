@@ -8,18 +8,24 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-2xl mx-auto px-6 py-12">
-      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-8"><span className="text-[#999999] mr-2">02 /</span>Skills</p>
+    <section id="skills" className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
+      <div className="flex items-baseline gap-4 mb-10">
+        <span className="font-mono text-xs text-[#555555]">02</span>
+        <span className="h-px flex-grow bg-[#1f1f1f]" />
+        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">stack</h2>
+      </div>
 
-      <div className="space-y-6">
+      <div className="space-y-8">
         {skillGroups.map((group) => (
-          <div key={group.category} className="flex flex-col sm:flex-row sm:gap-8">
-            <p className="text-sm text-[#999999] w-32 shrink-0 mb-2 sm:mb-0 sm:pt-0.5">{group.category}</p>
+          <div key={group.category} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8">
+            <p className="font-mono text-xs tracking-widest text-[#888888] uppercase pt-1.5">
+              {group.category}
+            </p>
             <div className="flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-2.5 py-0.5 text-xs border border-[#cccccc] rounded text-[#444444] bg-transparent"
+                  className="font-mono text-xs px-3 py-1.5 border border-[#1f1f1f] text-[#ededed] bg-[#121212] hover:border-[#a3e635] hover:text-[#a3e635] transition-colors"
                 >
                   {skill}
                 </span>
@@ -28,8 +34,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-
-      <hr className="mt-12 border-[#e8e8e8]" />
     </section>
   );
 }
