@@ -1,17 +1,17 @@
 const projects = [
   {
-    title: "End-to-End MLOps Pipeline",
-    stack: "Python · FastAPI · Docker · MLflow · DVC",
-    description:
-      "ML pipeline for predicting bank customer churn on 10k samples. Tested three models, best ROC-AUC was 0.730 with gradient boosting. Hooked up Evidently AI for drift detection and automated everything with GitHub Actions.",
-    github: "https://github.com/georgebon5/MLOps-project",
-  },
-  {
     title: "Multi-Tenant AI RAG System",
     stack: "FastAPI · ChromaDB · Celery · Redis · Kubernetes",
     description:
-      "Multi-tenant backend where users can upload docs and chat with them. Ended up around 13k lines — 55 endpoints, 330 tests. Celery and Redis for background jobs, WebSocket streaming for LLM responses, full RBAC, deploys on Kubernetes.",
+      "Multi-tenant backend where users upload docs and chat with them. ~13k lines — 55 endpoints, 330 tests. Celery and Redis for background jobs, WebSocket streaming for LLM responses, full RBAC, Kubernetes deploys.",
     github: "https://github.com/georgebon5/Multi-Tenant-AI-RAG-System",
+  },
+  {
+    title: "End-to-End MLOps Pipeline",
+    stack: "Python · FastAPI · Docker · MLflow · DVC",
+    description:
+      "ML pipeline predicting bank customer churn on 10k samples. Three models tested, best ROC-AUC 0.730 with gradient boosting. Evidently AI for drift detection, GitHub Actions for everything else.",
+    github: "https://github.com/georgebon5/MLOps-project",
   },
 ];
 
@@ -20,42 +20,47 @@ const coursework = [
   { title: "Database Systems", stack: "C — B+ trees, file organization, indexing" },
   { title: "Operating Systems", stack: "C — processes, memory, scheduling" },
   { title: "RSA", stack: "C — encryption from scratch" },
-  { title: "eshop", stack: "C++ — basic e-commerce simulation" },
   { title: "opengl-shadow-renderer", stack: "C++ — 3D renderer, shadow mapping, Phong lighting" },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
-      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
-        <p className="font-mono text-xs text-[#555555]">03 — Projects</p>
-        <div />
-      </div>
+    <section id="projects" className="py-20 border-t border-[#1f1f1f]">
+      <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
+        Selected Work
+      </h2>
 
-      <div className="space-y-14 md:ml-[160px]">
-        {projects.map((project) => (
-          <article key={project.title}>
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
-              <h3 className="font-display text-xl font-semibold text-[#e8e8e8]">
+      <div className="space-y-16">
+        {projects.map((project, i) => (
+          <article key={project.title} className="group">
+            <div className="flex items-baseline gap-4 mb-2">
+              <span className="font-mono text-xs text-[#555555]">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold text-[#e8e8e8] group-hover:text-white transition-colors">
                 {project.title}
               </h3>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
-              >
-                GitHub →
-              </a>
             </div>
-            <p className="text-sm text-[#555555] mb-3">{project.stack}</p>
-            <p className="text-[#c8c8c8] leading-relaxed">{project.description}</p>
+            <p className="text-sm text-[#555555] mb-4 ml-10">{project.stack}</p>
+            <p className="text-[#c8c8c8] leading-relaxed ml-10 mb-4">
+              {project.description}
+            </p>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-10 inline-block text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
+            >
+              View on GitHub →
+            </a>
           </article>
         ))}
       </div>
 
-      <div className="mt-14 md:ml-[160px]">
-        <p className="text-sm text-[#555555] mb-5">Coursework</p>
+      <div className="mt-16 pt-10 border-t border-[#1f1f1f]">
+        <h3 className="text-xs tracking-widest uppercase text-[#555555] mb-6">
+          Coursework
+        </h3>
         <div className="space-y-2">
           {coursework.map((item) => (
             <div key={item.title} className="grid grid-cols-[auto_1fr] gap-4 text-sm">
@@ -68,7 +73,7 @@ export default function Projects() {
           href="https://github.com/georgebon5/programming-projects"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-5 text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
+          className="inline-block mt-5 text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
         >
           Full repo →
         </a>

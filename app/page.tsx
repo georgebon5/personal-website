@@ -1,30 +1,28 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Currently from "./components/Currently";
-import Skills from "./components/Skills";
+import Sidebar from "./components/Sidebar";
+import About from "./components/About";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 import Awards from "./components/Awards";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Currently />
-        <Skills />
+    <div className="max-w-7xl mx-auto lg:flex">
+      <Sidebar />
+
+      <main className="flex-1 px-6 lg:px-14 lg:py-20">
+        <About />
         <Projects />
+        <Skills />
         <Awards />
         <Education />
         <Contact />
-      </main>
 
-      <footer className="max-w-4xl mx-auto px-6 py-8 border-t border-[#1f1f1f] flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-[#555555]">
-        <span>George Bonovas · {new Date().getFullYear()}</span>
-        <span>Built with Next.js</span>
-      </footer>
-    </>
+        <footer className="pt-10 border-t border-[#1f1f1f] text-xs text-[#555555]">
+          George Bonovas · {new Date().getFullYear()} · Built with Next.js
+        </footer>
+      </main>
+    </div>
   );
 }

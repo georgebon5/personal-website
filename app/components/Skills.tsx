@@ -8,15 +8,14 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
-      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
-        <p className="font-mono text-xs text-[#555555]">02 — Skills</p>
-        <div />
-      </div>
+    <section id="skills" className="py-20 border-t border-[#1f1f1f]">
+      <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
+        Skills
+      </h2>
 
-      <div className="space-y-6 md:ml-[160px]">
+      <div className="space-y-6">
         {skillGroups.map((group) => (
-          <div key={group.category} className="grid grid-cols-[90px_1fr] gap-6">
+          <div key={group.category} className="grid grid-cols-[110px_1fr] gap-6">
             <p className="text-sm text-[#555555] pt-1">{group.category}</p>
             <p className="text-[#e8e8e8] leading-relaxed">
               {group.skills.join(", ")}
