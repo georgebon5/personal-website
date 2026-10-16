@@ -43,7 +43,7 @@ export default function Sidebar() {
           Software Engineer, based in Athens.
         </p>
         <p className="mt-6 text-[#c8c8c8] leading-relaxed max-w-sm anim-3">
-          I build backend systems and AI pipelines. Currently a 3rd-year CS
+          I build backend systems and AI pipelines. Currently a 4th-year CS
           student at NKUA, looking for a software engineering internship.
         </p>
 
