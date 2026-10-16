@@ -1,0 +1,154 @@
+%-------------------------
+% Resume in Latex
+% Author : Gabriel Sison
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Random Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Heading  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \begin{center}
+        {\Huge\scshape GEORGE BONOVAS} \\ \vspace{4pt}
+        Software Engineer \\ \vspace{4pt}
+        \small
+        \raisebox{-0.2\height}\faPhone\ +30 6980640809 ~
+        \href{mailto:georgebonovas315@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{georgebonovas315@gmail.com}} ~
+        \href{http://www.linkedin.com/in/george-bonovas}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}} ~
+        \href{https://github.com/georgebon5}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}}
+    \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Summary  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+\small{4th-year CS student at NKUA, building things in the AI/ML and backend space. I've shipped production-level projects end-to-end and I'm looking for an internship or junior role where I can actually contribute.}
+\vspace{-2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Education  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National and Kapodistrian University of Athens (NKUA)}{Athens, Greece}
+      {Bachelor's in Computer Science \textemdash\ GPA: 8.2/10.0}{Expected 2027}
+
+        \vspace{5pt}\small\textbf{Relevant Coursework:} Algorithms \& Complexity, Machine Learning, Operating Systems, Distributed Systems, Graph Theory.
+
+  \resumeSubHeadingListEnd
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Awards & Competitions  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards \& Competitions}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {1st Place \textemdash\ TechBiz Hackathon, NBG Challenge}{}
+      {National Bank of Greece (NBG) \textemdash\ 1st in NBG Track, 3rd Overall}{}
+  \resumeSubHeadingListEnd
+  \resumeItemListStart
+    \resumeItem{Co-developed \textbf{Next Jr.}, a full-stack youth banking platform using \textbf{Next.js} and \textbf{Anthropic's Claude API}.}
+    \resumeItem{Shipped a dual-codebase MVP with GDPR compliance and REST API mockups in under \textbf{24 hours}.}
+    \resumeItem{\href{https://frontend-sand-pi-23.vercel.app}{\underline{Live Demo}} \quad \href{https://github.com/georgebon5/programming-projects}{\underline{Repository}}}
+  \resumeItemListEnd
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Projects  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technical Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{End-to-End MLOps Pipeline} $|$ \emph{Python, FastAPI, Docker, MLflow, DVC, GitHub Actions} \href{https://github.com/georgebon5/MLOps-project}{\underline{[Link]}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a full ML pipeline for bank customer churn prediction on 10k samples: trained and compared 3 models (Random Forest, Gradient Boosting, Logistic Regression), achieving best ROC-AUC of 0.730.}
+      \resumeItem{Used \textbf{DVC} for data versioning and \textbf{MLflow} for experiment tracking: deployed as a \textbf{FastAPI} service inside \textbf{Docker}.}
+      \resumeItem{Added automated data drift monitoring with \textbf{Evidently AI} and a \textbf{GitHub Actions} CI/CD pipeline with unit tests.}
+    \resumeItemListEnd
+
+    \vspace{6pt}
+    \resumeProjectHeading
+      {\textbf{Multi-Tenant AI RAG System} $|$ \emph{FastAPI, ChromaDB, Celery, Redis, Kubernetes} \href{https://github.com/georgebon5/multi-tenant-rag}{\underline{[Link]}}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a production-ready \textbf{RAG}-based document chat backend with file upload and semantic querying: 13k+ LOC, 55 API endpoints, and 330 tests.}
+      \resumeItem{Implemented async background tasks with \textbf{Celery} \& \textbf{Redis}, and real-time LLM streaming via \textbf{WebSockets}.}
+      \resumeItem{Enforced full \textbf{RBAC} (role-based access control) and included \textbf{Kubernetes} deployment manifests for production use.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Certifications  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Workshop Series: Innovation, Entrepreneurship \& Deep Tech}{Nov 2025}
+      {EIT Higher Education Initiative (European Institute of Innovation \& Technology)}{}
+  \resumeSubHeadingListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt}
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.0in, label={}]
+  \item \small \textbf{Languages:}{ Python, C++, SQL, TypeScript, JavaScript.}
+  \item \small \textbf{Machine Learning \& AI:}{ PyTorch, Scikit-learn, ChromaDB, Anthropic SDK, Evidently AI, RAG, LLM integration.}
+  \item \small \textbf{Backend \& Infrastructure:}{ FastAPI, Flask, PostgreSQL, Redis, Celery, Docker, Kubernetes, GitHub Actions (CI/CD), MLflow, DVC.}
+\end{itemize}
+
+\end{document}
