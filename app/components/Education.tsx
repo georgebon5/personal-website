@@ -1,39 +1,36 @@
 export default function Education() {
   return (
-    <section id="education" className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
-      <div className="flex items-baseline gap-4 mb-10">
-        <span className="font-mono text-xs text-[#555555]">05</span>
-        <span className="h-px flex-grow bg-[#1f1f1f]" />
-        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">education</h2>
+    <section id="education" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
+      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
+        <p className="font-mono text-xs text-[#555555]">05 — Education</p>
+        <div />
       </div>
 
-      <div className="grid gap-5">
-        <div className="border border-[#1f1f1f] bg-[#121212]/40 p-6 md:p-8 hover:border-[#a3e635]/40 transition-colors">
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
-            <h3 className="font-display text-xl md:text-2xl font-semibold text-[#ededed]">
+      <div className="space-y-10 md:ml-[160px]">
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+            <h3 className="font-display text-xl font-semibold text-[#e8e8e8]">
               National and Kapodistrian University of Athens
             </h3>
-            <span className="font-mono text-xs text-[#a3e635]">expected · 2027</span>
+            <span className="text-sm text-[#888888]">Expected 2027</span>
           </div>
-          <p className="font-mono text-xs text-[#888888] mb-1">
-            BSc Computer Science <span className="text-[#555555]">//</span> GPA 8.2 / 10.0
+          <p className="text-sm text-[#555555] mb-3">
+            BSc Computer Science — GPA 8.2 / 10.0 · Athens, Greece
           </p>
-          <p className="font-mono text-xs text-[#555555] mb-4">Athens, Greece</p>
-          <p className="text-sm text-[#ededed]/80 leading-relaxed">
-            <span className="text-[#888888]">Coursework: </span>
-            Algorithms &amp; Complexity, Machine Learning, Operating Systems,
+          <p className="text-[#c8c8c8] leading-relaxed">
+            Coursework: Algorithms &amp; Complexity, Machine Learning, Operating Systems,
             Distributed Systems, Graph Theory.
           </p>
         </div>
 
-        <div className="border border-[#1f1f1f] bg-[#121212]/40 p-6 md:p-8 hover:border-[#a3e635]/40 transition-colors">
-          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
-            <h3 className="font-display text-lg md:text-xl font-semibold text-[#ededed]">
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+            <h3 className="font-display text-lg font-semibold text-[#e8e8e8]">
               Workshop: Innovation, Entrepreneurship &amp; Deep Tech
             </h3>
-            <span className="font-mono text-xs text-[#a3e635]">nov · 2025</span>
+            <span className="text-sm text-[#888888]">Nov 2025</span>
           </div>
-          <p className="font-mono text-xs text-[#888888]">
+          <p className="text-sm text-[#555555]">
             EIT Higher Education Initiative
           </p>
         </div>

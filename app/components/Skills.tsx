@@ -8,29 +8,19 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
-      <div className="flex items-baseline gap-4 mb-10">
-        <span className="font-mono text-xs text-[#555555]">02</span>
-        <span className="h-px flex-grow bg-[#1f1f1f]" />
-        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">stack</h2>
+    <section id="skills" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
+      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
+        <p className="font-mono text-xs text-[#555555]">02 — Skills</p>
+        <div />
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6 md:ml-[160px]">
         {skillGroups.map((group) => (
-          <div key={group.category} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8">
-            <p className="font-mono text-xs tracking-widest text-[#888888] uppercase pt-1.5">
-              {group.category}
+          <div key={group.category} className="grid grid-cols-[90px_1fr] gap-6">
+            <p className="text-sm text-[#555555] pt-1">{group.category}</p>
+            <p className="text-[#e8e8e8] leading-relaxed">
+              {group.skills.join(", ")}
             </p>
-            <div className="flex flex-wrap gap-2">
-              {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="font-mono text-xs px-3 py-1.5 border border-[#1f1f1f] text-[#ededed] bg-[#121212] hover:border-[#a3e635] hover:text-[#a3e635] transition-colors"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
           </div>
         ))}
       </div>

@@ -1,18 +1,16 @@
 const projects = [
   {
     title: "End-to-End MLOps Pipeline",
-    year: "Python · FastAPI · Docker · MLflow · DVC",
+    stack: "Python · FastAPI · Docker · MLflow · DVC",
     description:
       "ML pipeline for predicting bank customer churn on 10k samples. Tested three models, best ROC-AUC was 0.730 with gradient boosting. Hooked up Evidently AI for drift detection and automated everything with GitHub Actions.",
-    tags: ["Python", "FastAPI", "Docker", "MLflow", "DVC", "Evidently AI"],
     github: "https://github.com/georgebon5/MLOps-project",
   },
   {
     title: "Multi-Tenant AI RAG System",
-    year: "FastAPI · ChromaDB · Celery · Redis · Kubernetes",
+    stack: "FastAPI · ChromaDB · Celery · Redis · Kubernetes",
     description:
-      "Multi-tenant backend where users can upload docs and chat with them. Ended up around 13k lines — 55 endpoints, 330 tests. Celery and Redis for background jobs, WebSocket streaming for the LLM responses, full RBAC, deploys on Kubernetes.",
-    tags: ["FastAPI", "ChromaDB", "Celery", "Redis", "Kubernetes", "WebSockets"],
+      "Multi-tenant backend where users can upload docs and chat with them. Ended up around 13k lines — 55 endpoints, 330 tests. Celery and Redis for background jobs, WebSocket streaming for LLM responses, full RBAC, deploys on Kubernetes.",
     github: "https://github.com/georgebon5/Multi-Tenant-AI-RAG-System",
   },
 ];
@@ -28,64 +26,41 @@ const coursework = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
-      <div className="flex items-baseline gap-4 mb-10">
-        <span className="font-mono text-xs text-[#555555]">03</span>
-        <span className="h-px flex-grow bg-[#1f1f1f]" />
-        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">projects</h2>
+    <section id="projects" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
+      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
+        <p className="font-mono text-xs text-[#555555]">03 — Projects</p>
+        <div />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-5">
-        {projects.map((project, i) => (
-          <article
-            key={project.title}
-            className="group relative border border-[#1f1f1f] bg-[#121212]/40 p-6 hover:border-[#a3e635]/40 hover:bg-[#121212] transition-all flex flex-col"
-          >
-            <div className="flex items-start justify-between mb-4">
-              <span className="font-mono text-xs text-[#555555]">
-                {String(i + 1).padStart(2, "0")}
-              </span>
+      <div className="space-y-14 md:ml-[160px]">
+        {projects.map((project) => (
+          <article key={project.title}>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+              <h3 className="font-display text-xl font-semibold text-[#e8e8e8]">
+                {project.title}
+              </h3>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-xs text-[#888888] hover:text-[#a3e635] transition-colors"
+                className="text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
               >
-                github ↗
+                GitHub →
               </a>
             </div>
-
-            <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold text-[#ededed] group-hover:text-[#a3e635] transition-colors leading-tight mb-2">
-              {project.title}
-            </h3>
-            <p className="font-mono text-xs text-[#555555] mb-4">{project.year}</p>
-            <p className="text-sm text-[#ededed]/80 leading-relaxed mb-5 flex-grow">
-              {project.description}
-            </p>
-
-            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[#1f1f1f]">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="font-mono text-[10px] px-2 py-1 bg-[#1a1a1a] text-[#888888]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <p className="text-sm text-[#555555] mb-3">{project.stack}</p>
+            <p className="text-[#c8c8c8] leading-relaxed">{project.description}</p>
           </article>
         ))}
       </div>
 
-      <div className="mt-16">
-        <p className="font-mono text-xs tracking-widest text-[#888888] uppercase mb-6">
-          <span className="text-[#555555] mr-2">//</span>coursework &amp; university
-        </p>
-        <div className="border border-[#1f1f1f] bg-[#121212]/40 divide-y divide-[#1f1f1f]">
+      <div className="mt-14 md:ml-[160px]">
+        <p className="text-sm text-[#555555] mb-5">Coursework</p>
+        <div className="space-y-2">
           {coursework.map((item) => (
-            <div key={item.title} className="grid grid-cols-[auto_1fr] gap-4 px-5 py-3 hover:bg-[#1a1a1a] transition-colors">
-              <span className="font-mono text-sm text-[#ededed] shrink-0">{item.title}</span>
-              <span className="text-sm text-[#888888]">{item.stack}</span>
+            <div key={item.title} className="grid grid-cols-[auto_1fr] gap-4 text-sm">
+              <span className="text-[#e8e8e8] shrink-0">{item.title}</span>
+              <span className="text-[#888888]">{item.stack}</span>
             </div>
           ))}
         </div>
@@ -93,9 +68,9 @@ export default function Projects() {
           href="https://github.com/georgebon5/programming-projects"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-5 font-mono text-xs text-[#a3e635] hover:text-[#bef264] transition-colors"
+          className="inline-block mt-5 text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
         >
-          view full repo →
+          Full repo →
         </a>
       </div>
     </section>

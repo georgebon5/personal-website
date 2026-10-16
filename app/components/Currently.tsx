@@ -1,27 +1,21 @@
 export default function Currently() {
   const items = [
-    { label: "exploring", value: "internship opportunities in software engineering" },
-    { label: "building", value: "personal projects" },
+    { label: "Exploring", value: "internship opportunities in software engineering" },
+    { label: "Building", value: "personal projects" },
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
-      <div className="flex items-baseline gap-4 mb-10">
-        <span className="font-mono text-xs text-[#555555]">01</span>
-        <span className="h-px flex-grow bg-[#1f1f1f]" />
-        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">currently</h2>
+    <section className="max-w-4xl mx-auto px-6 py-16 border-t border-[#1f1f1f]">
+      <div className="grid md:grid-cols-[160px_1fr] gap-6 mb-10">
+        <p className="font-mono text-xs text-[#555555]">01 — Currently</p>
+        <div />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="space-y-5 md:ml-[160px]">
         {items.map((item) => (
-          <div
-            key={item.label}
-            className="border border-[#1f1f1f] bg-[#121212]/40 p-6 hover:border-[#a3e635]/40 transition-colors"
-          >
-            <p className="font-mono text-[10px] tracking-widest text-[#a3e635] uppercase mb-3">
-              {item.label}
-            </p>
-            <p className="text-[#ededed] text-base leading-relaxed">{item.value}</p>
+          <div key={item.label} className="grid grid-cols-[90px_1fr] gap-6 text-base">
+            <span className="text-[#555555]">{item.label}</span>
+            <span className="text-[#e8e8e8]">{item.value}</span>
           </div>
         ))}
       </div>
