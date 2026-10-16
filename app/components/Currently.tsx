@@ -1,21 +1,30 @@
 export default function Currently() {
-  return (
-    <section className="max-w-2xl mx-auto px-6 py-10">
-      <p className="text-xs tracking-[0.2em] text-[#111111] font-semibold uppercase mb-5"><span className="text-[#999999] mr-2">01 /</span>Currently</p>
+  const items = [
+    { label: "exploring", value: "internship opportunities in software engineering" },
+    { label: "building", value: "personal projects" },
+  ];
 
-      <div className="space-y-3">
-        {[
-          { label: "Exploring", value: "internship opportunities in software engineering." },
-          { label: "Building", value: "personal projects" },
-        ].map((item) => (
-          <div key={item.label} className="flex gap-4 text-sm">
-            <span className="text-[#999999] w-20 shrink-0">{item.label}</span>
-            <span className="text-[#111111]">{item.value}</span>
+  return (
+    <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[#1f1f1f]">
+      <div className="flex items-baseline gap-4 mb-10">
+        <span className="font-mono text-xs text-[#555555]">01</span>
+        <span className="h-px flex-grow bg-[#1f1f1f]" />
+        <h2 className="font-mono text-xs tracking-widest text-[#a3e635] uppercase">currently</h2>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {items.map((item) => (
+          <div
+            key={item.label}
+            className="border border-[#1f1f1f] bg-[#121212]/40 p-6 hover:border-[#a3e635]/40 transition-colors"
+          >
+            <p className="font-mono text-[10px] tracking-widest text-[#a3e635] uppercase mb-3">
+              {item.label}
+            </p>
+            <p className="text-[#ededed] text-base leading-relaxed">{item.value}</p>
           </div>
         ))}
       </div>
-
-      <hr className="mt-10 border-[#e8e8e8]" />
     </section>
   );
 }
