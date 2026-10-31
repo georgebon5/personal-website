@@ -5,6 +5,7 @@ const projects = [
     description:
       "Multi-tenant backend where users upload docs and chat with them. ~13k lines — 55 endpoints, 330 tests. Celery and Redis for background jobs, WebSocket streaming for LLM responses, full RBAC, Kubernetes deploys.",
     github: "https://github.com/georgebon5/Multi-Tenant-AI-RAG-System",
+    demo: "https://multi-tenant-rag-api.onrender.com/app/#login",
   },
   {
     title: "End-to-End MLOps Pipeline",
@@ -45,14 +46,26 @@ export default function Projects() {
             <p className="text-[#c8c8c8] leading-relaxed ml-10 mb-4">
               {project.description}
             </p>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-10 inline-block text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
-            >
-              View on GitHub →
-            </a>
+            <div className="ml-10 flex flex-wrap gap-5">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
+              >
+                View on GitHub →
+              </a>
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm text-[#e8e8e8] hover:text-white underline underline-offset-4 decoration-[#555555] hover:decoration-[#e8e8e8] transition-colors"
+                >
+                  Live Demo →
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>
