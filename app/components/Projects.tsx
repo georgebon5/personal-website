@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: "minillm.cpp",
+    stack: "C++20 · NEON SIMD · SafeTensors · POSIX sockets · CMake",
+    description:
+      "From-scratch LLM inference engine — no PyTorch, no ggml, no BLAS. Implements the full transformer stack (GQA, RoPE, SwiGLU, KV cache) with hand-written NEON kernels. Runs SmolLM2 (135M–1.7B) at 10–61 tok/s on CPU. Direct BF16→INT8 loading keeps the 1.7B model under 2 GB RAM. Web UI with live token streaming, per-token top-5 probability panel, and FP32/INT8/INT4 side-by-side comparison mode.",
+    github: "https://github.com/georgebon5/minillm-cpp",
+    demo: "https://unwashed-swampland-chaffing.ngrok-free.dev",
+  },
+  {
     title: "Multi-Tenant AI RAG System",
     stack: "FastAPI · ChromaDB · Celery · Redis · Kubernetes",
     description:
