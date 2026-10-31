@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollReveal from "./components/ScrollReveal";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -56,7 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full"><ScrollToTop />{children}</body>
+      <body className="min-h-full"><ScrollToTop /><ScrollReveal />{children}</body>
     </html>
   );
 }

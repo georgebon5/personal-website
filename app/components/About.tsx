@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="pt-14 lg:pt-24 pb-20">
+    <section id="about" className="pt-14 lg:pt-24 pb-20" data-reveal>
       <h2 className="lg:hidden text-xs tracking-widest uppercase text-[#555555] mb-6">
         About
       </h2>

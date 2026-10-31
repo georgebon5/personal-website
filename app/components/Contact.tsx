@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 pb-28 border-t border-[#1f1f1f]">
+    <section id="contact" className="py-20 pb-28 border-t border-[#1f1f1f]" data-reveal>
       <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
         Contact
       </h2>

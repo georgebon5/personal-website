@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section id="education" className="py-20 border-t border-[#1f1f1f]">
+    <section id="education" className="py-20 border-t border-[#1f1f1f]" data-reveal>
       <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
         Education
       </h2>

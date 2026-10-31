@@ -8,7 +8,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 border-t border-[#1f1f1f]">
+    <section id="skills" className="py-20 border-t border-[#1f1f1f]" data-reveal>
       <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
         Skills
       </h2>
@@ -17,9 +17,16 @@ export default function Skills() {
         {skillGroups.map((group) => (
           <div key={group.category} className="grid grid-cols-[110px_1fr] gap-6">
             <p className="text-sm text-[#555555] pt-1">{group.category}</p>
-            <p className="text-[#e8e8e8] leading-relaxed">
-              {group.skills.join(", ")}
-            </p>
+            <div className="flex flex-wrap gap-x-2 gap-y-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-xs text-[#c8c8c8] bg-[#181818] border border-[#262626] px-2.5 py-1 rounded-sm"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
