@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollReveal from "./components/ScrollReveal";
+import KeyboardNav from "./components/KeyboardNav";
+import ConsoleGreeting from "./components/ConsoleGreeting";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -20,6 +22,11 @@ const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0d0d0d",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   title: "George Bonovas — Software Engineer",
@@ -57,7 +64,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable} h-full antialiased`}
     >
-      <body className="min-h-full"><ScrollToTop /><ScrollReveal />{children}</body>
+      <body className="min-h-full">
+        <ScrollToTop />
+        <ScrollReveal />
+        <KeyboardNav />
+        <ConsoleGreeting />
+        {children}
+      </body>
     </html>
   );
 }

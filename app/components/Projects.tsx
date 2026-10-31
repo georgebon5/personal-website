@@ -59,7 +59,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
+                className="link-underline text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
               >
                 View on GitHub →
               </a>
@@ -68,7 +68,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm text-[#e8e8e8] hover:text-white underline underline-offset-4 decoration-[#555555] hover:decoration-[#e8e8e8] transition-colors"
+                  className="link-underline text-sm text-[#e8e8e8] hover:text-white transition-colors"
                 >
                   Live Demo →
                 </a>
@@ -94,7 +94,7 @@ export default function Projects() {
           href="https://github.com/georgebon5/programming-projects"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-5 text-sm text-[#888888] hover:text-[#e8e8e8] underline underline-offset-4 decoration-[#333333] hover:decoration-[#888888] transition-colors"
+          className="link-underline mt-5 inline-block text-sm text-[#888888] hover:text-[#e8e8e8] transition-colors"
         >
           Full repo →
         </a>

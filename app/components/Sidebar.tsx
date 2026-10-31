@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import LocalTime from "./LocalTime";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -86,37 +87,48 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      <div className="mt-14 lg:mt-0 flex flex-wrap gap-x-6 gap-y-3 text-sm anim-4">
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#e8e8e8] hover:text-white underline underline-offset-4 decoration-[#555555] hover:decoration-[#e8e8e8] transition-colors"
-        >
-          CV
-        </a>
-        <a
-          href="mailto:georgebonovas315@gmail.com"
-          className="text-[#888888] hover:text-[#e8e8e8] transition-colors"
-        >
-          Email
-        </a>
-        <a
-          href="https://github.com/georgebon5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#888888] hover:text-[#e8e8e8] transition-colors"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/george-bonovas"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#888888] hover:text-[#e8e8e8] transition-colors"
-        >
-          LinkedIn
-        </a>
+      <div className="mt-14 lg:mt-0 anim-4">
+        <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-[#e8e8e8] hover:text-white transition-colors"
+          >
+            CV
+          </a>
+          <a
+            href="mailto:georgebonovas315@gmail.com"
+            className="link-underline text-[#888888] hover:text-[#e8e8e8] transition-colors"
+          >
+            Email
+          </a>
+          <a
+            href="https://github.com/georgebon5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-[#888888] hover:text-[#e8e8e8] transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/george-bonovas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-[#888888] hover:text-[#e8e8e8] transition-colors"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-[#1f1f1f] hidden lg:flex items-center justify-between">
+          <LocalTime />
+          <span className="font-mono text-[11px] text-[#444444]">
+            press <kbd className="text-[#777777]">g</kbd>
+            <span className="mx-0.5 text-[#333333]">·</span>
+            <kbd className="text-[#777777]">p</kbd>
+          </span>
+        </div>
       </div>
     </aside>
   );

@@ -16,7 +16,7 @@ export default function Contact() {
 
       <a
         href="mailto:georgebonovas315@gmail.com"
-        className="inline-block text-[#e8e8e8] hover:text-white underline underline-offset-4 decoration-[#555555] hover:decoration-[#e8e8e8] transition-colors"
+        className="link-underline inline-block text-[#e8e8e8] hover:text-white transition-colors"
       >
         georgebonovas315@gmail.com
       </a>
