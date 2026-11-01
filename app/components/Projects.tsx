@@ -8,6 +8,13 @@ const projects = [
     demo: "https://unwashed-swampland-chaffing.ngrok-free.dev",
   },
   {
+    title: "Response Clarity Classification — SemEval 2026 Task 6",
+    stack: "Python · PyTorch · HuggingFace · Qwen2.5 · scikit-learn",
+    description:
+      "Three-way classification of political response clarity on the QEvasion dataset. Ran four approaches end-to-end on the same split — TF-IDF/Word2Vec baselines, fine-tuned BERT/DistilBERT/DeBERTa-v3, Qwen2.5-3B/7B prompting (zero/few-shot/CoT), and a four-agent D3-agentic pipeline on a 0.5B backbone. Final submission is a 6-encoder ensemble with pseudo-labelling — 2nd place on the private Kaggle leaderboard (macro F1 0.67).",
+    github: "https://github.com/georgebon5/political-response-clarity",
+  },
+  {
     title: "Multi-Tenant AI RAG System",
     stack: "FastAPI · ChromaDB · Celery · Redis · Kubernetes",
     description:
