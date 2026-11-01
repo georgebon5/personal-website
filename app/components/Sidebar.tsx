@@ -48,10 +48,17 @@ export default function Sidebar() {
           student at NKUA, looking for a software engineering internship.
         </p>
 
-        <p className="mt-6 inline-flex items-center gap-2 text-sm text-[#888888] anim-3">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] animate-pulse-dot" />
-          Open to internships
-        </p>
+        <div className="mt-6 space-y-2 anim-3">
+          <p className="inline-flex items-center gap-2 text-sm text-[#888888]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] animate-pulse-dot" />
+            Open to internships
+          </p>
+          <p className="flex items-center gap-2 text-sm text-[#888888]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#555555]" />
+            Researching KV cache quantization
+            <span className="text-[#555555]">· BSc thesis</span>
+          </p>
+        </div>
 
         <nav className="hidden lg:block mt-14 anim-4">
           <ul className="space-y-3">

@@ -21,6 +21,13 @@ export default function About() {
           <span className="text-[#e8e8e8]">banking hackathon</span>.
         </p>
         <p>
+          For my thesis I&apos;m now researching{" "}
+          <span className="text-[#e8e8e8]">KV cache quantization</span> for
+          efficient LLM inference — a natural continuation of the inference
+          engine work in minillm.cpp, this time at the activation side rather
+          than the weights.
+        </p>
+        <p>
           I&apos;m currently looking for an internship where I can keep
           working close to the metal — distributed systems, data pipelines,
           or applied AI. Remote or hybrid, anywhere.
