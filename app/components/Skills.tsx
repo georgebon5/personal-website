@@ -21,7 +21,7 @@ export default function Skills() {
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs text-[#c8c8c8] bg-[#181818] border border-[#262626] px-2.5 py-1 rounded-sm"
+                  className="text-xs text-[#c8c8c8] bg-[#181818] border border-[#262626] px-2.5 py-1 rounded-sm transition-colors duration-200 hover:border-[#3a3a3a] hover:text-[#e8e8e8]"
                 >
                   {skill}
                 </span>
