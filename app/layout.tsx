@@ -5,7 +5,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import ScrollReveal from "./components/ScrollReveal";
 import KeyboardNav from "./components/KeyboardNav";
 import ConsoleGreeting from "./components/ConsoleGreeting";
-import CursorGlow from "./components/CursorGlow";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -70,7 +69,6 @@ export default function RootLayout({
         <ScrollReveal />
         <KeyboardNav />
         <ConsoleGreeting />
-        <CursorGlow />
         {children}
       </body>
     </html>
