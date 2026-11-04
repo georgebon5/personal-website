@@ -41,14 +41,15 @@ const coursework = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 border-t border-[#1f1f1f]" data-reveal>
-      <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10">
+    <section id="projects" className="py-20 border-t border-[#1f1f1f]">
+      <h2 className="text-xs tracking-widest uppercase text-[#555555] mb-10" data-reveal>
         Selected Work
       </h2>
 
       <div className="space-y-16">
         {projects.map((project, i) => (
-          <article key={project.title} className="group border-l-2 border-transparent hover:border-[#3a3a3a] pl-5 -ml-5 transition-colors duration-500">
+          <div key={project.title} data-reveal style={{ transitionDelay: `${i * 110}ms` }}>
+          <article className="group border-l-2 border-transparent hover:border-[#3a3a3a] pl-5 -ml-5 transition-colors duration-500">
             <div className="flex items-baseline gap-4 mb-2">
               <span className="font-mono text-xs text-[#555555] group-hover:text-[#e8e8e8] transition-colors duration-300">
                 {String(i + 1).padStart(2, "0")}
@@ -82,6 +83,7 @@ export default function Projects() {
               )}
             </div>
           </article>
+          </div>
         ))}
       </div>
 
