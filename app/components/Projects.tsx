@@ -48,9 +48,9 @@ export default function Projects() {
 
       <div className="space-y-16">
         {projects.map((project, i) => (
-          <article key={project.title} className="group border-l-2 border-transparent hover:border-[#2a2a2a] pl-5 -ml-5 transition-colors duration-500">
+          <article key={project.title} className="group border-l-2 border-transparent hover:border-[#3a3a3a] pl-5 -ml-5 transition-colors duration-500">
             <div className="flex items-baseline gap-4 mb-2">
-              <span className="font-mono text-xs text-[#555555]">
+              <span className="font-mono text-xs text-[#555555] group-hover:text-[#e8e8e8] transition-colors duration-300">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-2xl md:text-[1.75rem] font-semibold text-[#e8e8e8] group-hover:text-white transition-colors">
